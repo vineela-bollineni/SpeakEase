@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Register Issue</h2>
+
+  <select id="category">
+    <option value="">Select Category</option>
+    <option>Classroom</option>
+    <option>Hostel</option>
+    <option>Washroom</option>
+    <option>Food</option>
+    <option>Infrastructure</option>
+  </select>
+
+  <select id="urgency">
+    <option value="">Select Urgency</option>
+    <option value="urgent">Very Urgent</option>
+    <option value="moderate">Moderate</option>
+    <option value="normal">Normal</option>
+  </select>
+
+  <textarea id="description" placeholder="Describe the issue..."></textarea>
+
+  <!-- Error message -->
+  <p id="errorMsg" class="error-msg"></p>
+  <p id="successMsg" class="success-msg"></p>
+
+
+  <button onclick="submitIssue()">Submit Issue</button>
+  <button onclick="window.location.href='solved.html'">
+    View Solved Issues
+  </button>
+</div>
+
+<script src="js/student.js"></script>
+</body>
+</html>

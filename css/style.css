@@ -1,0 +1,273 @@
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    -45deg,
+    #667eea,
+    #764ba2,
+    #43cea2,
+    #ff6a00
+  );
+
+  background-size: 400% 400%;
+  animation: gradientBG 5s ease infinite;
+}
+ 
+/* Background animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Login box */
+.container {
+  width: 350px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  animation: fadeIn 1.2s ease;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* Inputs */
+select,
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+select {
+  background: #fff;
+}
+
+input {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.date-time {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 8px;
+}
+.date-time {
+  font-size: 12px;
+  color: #555;
+  margin: 4px 0;
+}
+
+.date-time.solved {
+  color: #2ecc71;
+  font-weight: 500;
+}
+
+.eye {
+  position: absolute;
+  right: 12px;
+  top: 68%;
+  left:85%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+
+  /* existing eye svg */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpath d='M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E")
+    no-repeat center;
+}
+
+/* strike line */
+.eye::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -2px;
+  width: 24px;
+  height: 2px;
+  background: #666;
+  transform: rotate(-45deg);
+  opacity: 0;
+}
+
+/* when password is visible */
+.eye.visible::after {
+  opacity: 1;
+}
+
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 114, 255, 0.5);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+ 
+ 
+
+.container {
+  background: #fff;
+  width: 380px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+input, select, textarea {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+button {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border: none;
+  background: #667eea;
+  color: white;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5a67d8;
+}
+
+
+.error-msg {
+  color: #ff4d4d;
+  font-size: 13px;
+  margin-bottom: 10px;
+  display: none;
+  text-align: left;
+}
+input.error {
+  border: 2px solid #ff4d4d;
+}
+
+ 
+
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: white;
+}
+
+.urgent { background: red; }
+.moderate { background: orange; }
+.normal { background: green; }
+
+.issue-flex {
+  display: flex;
+  flex-wrap: wrap;          /* allows next row */
+  gap: 15px;
+  margin-top: 15px; 
+  align-content: space-evenly;
+  justify-content: center;
+
+}
+
+.issue {   /* 2 cards per row */
+  width: calc(50%-10px);
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.issue p {
+  margin: 6px 0;
+  width:200px;
+  line-height: 1.5;
+  white-space:normal;          /* allow wrapping */
+  word-wrap:break-word;        /* break long words */
+  overflow-wrap: break-word;    /* modern standard */
+}
+
+  
+.container-faculty{
+  width: 900px;
+  display: flex;
+  flex-direction: column; 
+  height: 100%; 
+  padding-top: 30px; 
+
+}  
+
+.success-msg {
+  color: #2ecc71;
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: none;
+  text-align: left;
+  font-weight: 500;
+}
